@@ -1049,13 +1049,11 @@ uint8_t static writedata(uint8_t c) {
 
 #else
   //Keil uVision Code
-  __asm void parrotdelay(uint32_t ulCount)
-  {
-    subs    r0, #1
-    bne     parrotdelay
-    bx      lr
-  }
-
+  void parrotdelay(uint32_t ulCount)
+{
+    while(ulCount--){
+    }
+}
 #endif
 
 
