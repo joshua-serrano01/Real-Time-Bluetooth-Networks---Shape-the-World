@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\Objects\BoardSupportPackage.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\BoardSupportPackage.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Thu Feb 19 17:39:08 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Fri Mar 27 16:33:52 2026
 <BR><P>
-<H3>Maximum Stack Usage =        168 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        152 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-__rt_entry_main &rArr; main &rArr; BSP_LCD_OutUDec &rArr; BSP_LCD_DrawString &rArr; BSP_LCD_DrawChar &rArr; setAddrWindow &rArr; writedata
+__rt_entry_main &rArr; main &rArr; BSP_LCD_OutUDec &rArr; BSP_LCD_DrawString &rArr; BSP_LCD_DrawChar &rArr; setAddrWindow
 <P>
 <H3>
 Functions with no stack information
@@ -381,8 +381,8 @@ Global Symbols
 <P><STRONG><a name="[e9]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[8b]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
-<LI>Call Chain = __rt_entry_main &rArr; main &rArr; BSP_LCD_OutUDec &rArr; BSP_LCD_DrawString &rArr; BSP_LCD_DrawChar &rArr; setAddrWindow &rArr; writedata
+<BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
+<LI>Call Chain = __rt_entry_main &rArr; main &rArr; BSP_LCD_OutUDec &rArr; BSP_LCD_DrawString &rArr; BSP_LCD_DrawChar &rArr; setAddrWindow
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -1220,7 +1220,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[7f]"></a>StartCritical</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup_tm4c123.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_PeriodicTask_Init
+<BR><BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_Time_Init
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_PeriodicTask_Init
 </UL>
 
 <P><STRONG><a name="[80]"></a>EndCritical</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup_tm4c123.o(.text))
@@ -1279,7 +1280,7 @@ Global Symbols
 
 <P><STRONG><a name="[f3]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[95]"></a>BSP_Accelerometer_Init</STRONG> (Thumb, 124 bytes, Stack size 8 bytes, bsp.o(i.BSP_Accelerometer_Init))
+<P><STRONG><a name="[95]"></a>BSP_Accelerometer_Init</STRONG> (Thumb, 156 bytes, Stack size 8 bytes, bsp.o(i.BSP_Accelerometer_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BSP_Accelerometer_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcinit
@@ -1287,13 +1288,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b9]"></a>BSP_Accelerometer_Input</STRONG> (Thumb, 38 bytes, Stack size 12 bytes, bsp.o(i.BSP_Accelerometer_Input))
-<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = BSP_Accelerometer_Input
+<P><STRONG><a name="[b9]"></a>BSP_Accelerometer_Input</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, bsp.o(i.BSP_Accelerometer_Input))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BSP_Accelerometer_Input
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkbuttons
 </UL>
 
-<P><STRONG><a name="[c1]"></a>BSP_Button1_Init</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, bsp.o(i.BSP_Button1_Init))
+<P><STRONG><a name="[c1]"></a>BSP_Button1_Init</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, bsp.o(i.BSP_Button1_Init))
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -1301,7 +1302,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkbuttons
 </UL>
 
-<P><STRONG><a name="[c2]"></a>BSP_Button2_Init</STRONG> (Thumb, 98 bytes, Stack size 0 bytes, bsp.o(i.BSP_Button2_Init))
+<P><STRONG><a name="[c2]"></a>BSP_Button2_Init</STRONG> (Thumb, 124 bytes, Stack size 0 bytes, bsp.o(i.BSP_Button2_Init))
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -1309,20 +1310,20 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkbuttons
 </UL>
 
-<P><STRONG><a name="[c4]"></a>BSP_Buzzer_Init</STRONG> (Thumb, 138 bytes, Stack size 0 bytes, bsp.o(i.BSP_Buzzer_Init))
+<P><STRONG><a name="[c4]"></a>BSP_Buzzer_Init</STRONG> (Thumb, 184 bytes, Stack size 0 bytes, bsp.o(i.BSP_Buzzer_Init))
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b7]"></a>BSP_Buzzer_Set</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, bsp.o(i.BSP_Buzzer_Set))
+<P><STRONG><a name="[b7]"></a>BSP_Buzzer_Set</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, bsp.o(i.BSP_Buzzer_Set))
 <BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkbuttons
 </UL>
 
-<P><STRONG><a name="[c0]"></a>BSP_Clock_InitFastest</STRONG> (Thumb, 96 bytes, Stack size 0 bytes, bsp.o(i.BSP_Clock_InitFastest))
+<P><STRONG><a name="[c0]"></a>BSP_Clock_InitFastest</STRONG> (Thumb, 126 bytes, Stack size 0 bytes, bsp.o(i.BSP_Clock_InitFastest))
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[97]"></a>BSP_Delay1ms</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, bsp.o(i.BSP_Delay1ms))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = BSP_Delay1ms
+<P><STRONG><a name="[97]"></a>BSP_Delay1ms</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, bsp.o(i.BSP_Delay1ms))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BSP_Delay1ms
 </UL>
 <BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parrotdelay
 </UL>
@@ -1330,7 +1331,7 @@ Global Symbols
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;commandList
 </UL>
 
-<P><STRONG><a name="[98]"></a>BSP_Joystick_Init</STRONG> (Thumb, 216 bytes, Stack size 8 bytes, bsp.o(i.BSP_Joystick_Init))
+<P><STRONG><a name="[98]"></a>BSP_Joystick_Init</STRONG> (Thumb, 268 bytes, Stack size 8 bytes, bsp.o(i.BSP_Joystick_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BSP_Joystick_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcinit
@@ -1338,18 +1339,20 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b8]"></a>BSP_Joystick_Input</STRONG> (Thumb, 36 bytes, Stack size 12 bytes, bsp.o(i.BSP_Joystick_Input))
-<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = BSP_Joystick_Input
+<P><STRONG><a name="[b8]"></a>BSP_Joystick_Input</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, bsp.o(i.BSP_Joystick_Input))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BSP_Joystick_Input
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkbuttons
 </UL>
 
-<P><STRONG><a name="[c5]"></a>BSP_LCD_Color565</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, bsp.o(i.BSP_LCD_Color565))
-<BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<P><STRONG><a name="[c5]"></a>BSP_LCD_Color565</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, bsp.o(i.BSP_LCD_Color565))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BSP_LCD_Color565
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[99]"></a>BSP_LCD_DrawChar</STRONG> (Thumb, 190 bytes, Stack size 56 bytes, bsp.o(i.BSP_LCD_DrawChar))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = BSP_LCD_DrawChar &rArr; setAddrWindow &rArr; writedata
+<P><STRONG><a name="[99]"></a>BSP_LCD_DrawChar</STRONG> (Thumb, 260 bytes, Stack size 56 bytes, bsp.o(i.BSP_LCD_DrawChar))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = BSP_LCD_DrawChar &rArr; setAddrWindow
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setAddrWindow
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pushColor
@@ -1358,8 +1361,8 @@ Global Symbols
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LCD_DrawString
 </UL>
 
-<P><STRONG><a name="[9c]"></a>BSP_LCD_DrawString</STRONG> (Thumb, 88 bytes, Stack size 40 bytes, bsp.o(i.BSP_LCD_DrawString))
-<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = BSP_LCD_DrawString &rArr; BSP_LCD_DrawChar &rArr; setAddrWindow &rArr; writedata
+<P><STRONG><a name="[9c]"></a>BSP_LCD_DrawString</STRONG> (Thumb, 86 bytes, Stack size 32 bytes, bsp.o(i.BSP_LCD_DrawString))
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = BSP_LCD_DrawString &rArr; BSP_LCD_DrawChar &rArr; setAddrWindow
 </UL>
 <BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LCD_DrawChar
 </UL>
@@ -1367,8 +1370,8 @@ Global Symbols
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LCD_OutUDec
 </UL>
 
-<P><STRONG><a name="[9d]"></a>BSP_LCD_FillRect</STRONG> (Thumb, 116 bytes, Stack size 24 bytes, bsp.o(i.BSP_LCD_FillRect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = BSP_LCD_FillRect &rArr; setAddrWindow &rArr; writedata
+<P><STRONG><a name="[9d]"></a>BSP_LCD_FillRect</STRONG> (Thumb, 164 bytes, Stack size 32 bytes, bsp.o(i.BSP_LCD_FillRect))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = BSP_LCD_FillRect &rArr; setAddrWindow
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writedata
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setAddrWindow
@@ -1376,8 +1379,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LCD_FillScreen
 </UL>
 
-<P><STRONG><a name="[9f]"></a>BSP_LCD_FillScreen</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, bsp.o(i.BSP_LCD_FillScreen))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = BSP_LCD_FillScreen &rArr; BSP_LCD_FillRect &rArr; setAddrWindow &rArr; writedata
+<P><STRONG><a name="[9f]"></a>BSP_LCD_FillScreen</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, bsp.o(i.BSP_LCD_FillScreen))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = BSP_LCD_FillScreen &rArr; BSP_LCD_FillRect &rArr; setAddrWindow
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LCD_FillRect
 </UL>
@@ -1385,16 +1388,16 @@ Global Symbols
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_InitR
 </UL>
 
-<P><STRONG><a name="[a0]"></a>BSP_LCD_Init</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, bsp.o(i.BSP_LCD_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = BSP_LCD_Init &rArr; ST7735_InitR &rArr; commonInit &rArr; commandList &rArr; BSP_Delay1ms
+<P><STRONG><a name="[a0]"></a>BSP_LCD_Init</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, bsp.o(i.BSP_LCD_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = BSP_LCD_Init &rArr; ST7735_InitR &rArr; BSP_LCD_FillScreen &rArr; BSP_LCD_FillRect &rArr; setAddrWindow
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_InitR
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a2]"></a>BSP_LCD_OutUDec</STRONG> (Thumb, 82 bytes, Stack size 24 bytes, bsp.o(i.BSP_LCD_OutUDec))
-<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = BSP_LCD_OutUDec &rArr; BSP_LCD_DrawString &rArr; BSP_LCD_DrawChar &rArr; setAddrWindow &rArr; writedata
+<P><STRONG><a name="[a2]"></a>BSP_LCD_OutUDec</STRONG> (Thumb, 120 bytes, Stack size 24 bytes, bsp.o(i.BSP_LCD_OutUDec))
+<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = BSP_LCD_OutUDec &rArr; BSP_LCD_DrawString &rArr; BSP_LCD_DrawChar &rArr; setAddrWindow
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LCD_DrawString
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LCD_DrawChar
@@ -1403,21 +1406,21 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b6]"></a>BSP_LCD_SetCursor</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, bsp.o(i.BSP_LCD_SetCursor))
+<P><STRONG><a name="[b6]"></a>BSP_LCD_SetCursor</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, bsp.o(i.BSP_LCD_SetCursor))
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_InitR
 </UL>
 
-<P><STRONG><a name="[a4]"></a>BSP_LightSensor_End</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, bsp.o(i.BSP_LightSensor_End))
-<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = BSP_LightSensor_End &rArr; lightsensorend &rArr; I2C_Send3
+<P><STRONG><a name="[a4]"></a>BSP_LightSensor_End</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, bsp.o(i.BSP_LightSensor_End))
+<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = BSP_LightSensor_End &rArr; lightsensorend &rArr; I2C_Send3
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorstart
-<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorend
+<BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorstart
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorend
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a7]"></a>BSP_LightSensor_Init</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, bsp.o(i.BSP_LightSensor_Init))
+<P><STRONG><a name="[a7]"></a>BSP_LightSensor_Init</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, bsp.o(i.BSP_LightSensor_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BSP_LightSensor_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cinit
@@ -1425,25 +1428,25 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a9]"></a>BSP_LightSensor_Input</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, bsp.o(i.BSP_LightSensor_Input))
-<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = BSP_LightSensor_Input &rArr; lightsensorend &rArr; I2C_Send3
+<P><STRONG><a name="[a9]"></a>BSP_LightSensor_Input</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, bsp.o(i.BSP_LightSensor_Input))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = BSP_LightSensor_Input &rArr; lightsensorend &rArr; I2C_Send3
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorstart
-<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorend
-</UL>
-<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[aa]"></a>BSP_LightSensor_Start</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, bsp.o(i.BSP_LightSensor_Start))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = BSP_LightSensor_Start &rArr; lightsensorstart &rArr; I2C_Send3
-</UL>
-<BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorstart
+<BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorstart
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorend
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[ab]"></a>BSP_PeriodicTask_Init</STRONG> (Thumb, 134 bytes, Stack size 16 bytes, bsp.o(i.BSP_PeriodicTask_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
+<P><STRONG><a name="[aa]"></a>BSP_LightSensor_Start</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, bsp.o(i.BSP_LightSensor_Start))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = BSP_LightSensor_Start &rArr; lightsensorstart &rArr; I2C_Send3
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorstart
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[ab]"></a>BSP_PeriodicTask_Init</STRONG> (Thumb, 162 bytes, Stack size 24 bytes, bsp.o(i.BSP_PeriodicTask_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
 <LI>Call Chain = BSP_PeriodicTask_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartCritical
@@ -1452,28 +1455,28 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c3]"></a>BSP_RGB_Init</STRONG> (Thumb, 414 bytes, Stack size 32 bytes, bsp.o(i.BSP_RGB_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = BSP_RGB_Init
+<P><STRONG><a name="[c3]"></a>BSP_RGB_Init</STRONG> (Thumb, 522 bytes, Stack size 8 bytes, bsp.o(i.BSP_RGB_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BSP_RGB_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[bc]"></a>BSP_RGB_Set</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, bsp.o(i.BSP_RGB_Set))
+<P><STRONG><a name="[bc]"></a>BSP_RGB_Set</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, bsp.o(i.BSP_RGB_Set))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BSP_RGB_Set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkbuttons
 </UL>
 
-<P><STRONG><a name="[ac]"></a>BSP_TempSensor_End</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, bsp.o(i.BSP_TempSensor_End))
-<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = BSP_TempSensor_End &rArr; tempsensorend &rArr; I2C_Recv2
+<P><STRONG><a name="[ac]"></a>BSP_TempSensor_End</STRONG> (Thumb, 70 bytes, Stack size 24 bytes, bsp.o(i.BSP_TempSensor_End))
+<BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = BSP_TempSensor_End &rArr; tempsensorend &rArr; I2C_Recv2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tempsensorstart
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tempsensorend
+<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tempsensorstart
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tempsensorend
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[af]"></a>BSP_TempSensor_Init</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, bsp.o(i.BSP_TempSensor_Init))
+<P><STRONG><a name="[af]"></a>BSP_TempSensor_Init</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, bsp.o(i.BSP_TempSensor_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BSP_TempSensor_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cinit
@@ -1481,44 +1484,54 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b0]"></a>BSP_TempSensor_Input</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, bsp.o(i.BSP_TempSensor_Input))
-<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = BSP_TempSensor_Input &rArr; tempsensorend &rArr; I2C_Recv2
+<P><STRONG><a name="[b0]"></a>BSP_TempSensor_Input</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, bsp.o(i.BSP_TempSensor_Input))
+<BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = BSP_TempSensor_Input &rArr; tempsensorend &rArr; I2C_Recv2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tempsensorstart
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tempsensorend
-</UL>
-<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[b1]"></a>BSP_TempSensor_Start</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, bsp.o(i.BSP_TempSensor_Start))
-<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = BSP_TempSensor_Start &rArr; tempsensorstart &rArr; I2C_Send3
-</UL>
-<BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tempsensorstart
+<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tempsensorstart
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tempsensorend
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c7]"></a>BSP_Time_Get</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, bsp.o(i.BSP_Time_Get))
+<P><STRONG><a name="[b1]"></a>BSP_TempSensor_Start</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, bsp.o(i.BSP_TempSensor_Start))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = BSP_TempSensor_Start &rArr; tempsensorstart &rArr; I2C_Send3
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tempsensorstart
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[c7]"></a>BSP_Time_Get</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, bsp.o(i.BSP_Time_Get))
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b2]"></a>BSP_Time_Init</STRONG> (Thumb, 68 bytes, Stack size 0 bytes, bsp.o(i.BSP_Time_Init))
-<BR><BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EndCritical
+<P><STRONG><a name="[b2]"></a>BSP_Time_Init</STRONG> (Thumb, 94 bytes, Stack size 8 bytes, bsp.o(i.BSP_Time_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
+<LI>Call Chain = BSP_Time_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartCritical
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EndCritical
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[56]"></a>WideTimer3A_Handler</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, bsp.o(i.WideTimer3A_Handler))
+<P><STRONG><a name="[56]"></a>WideTimer3A_Handler</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, bsp.o(i.WideTimer3A_Handler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = WideTimer3A_Handler
+</UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
 </UL>
-<P><STRONG><a name="[58]"></a>WideTimer4A_Handler</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, bsp.o(i.WideTimer4A_Handler))
+<P><STRONG><a name="[58]"></a>WideTimer4A_Handler</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, bsp.o(i.WideTimer4A_Handler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = WideTimer4A_Handler
+</UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
 </UL>
-<P><STRONG><a name="[5a]"></a>WideTimer5A_Handler</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, bsp.o(i.WideTimer5A_Handler))
+<P><STRONG><a name="[5a]"></a>WideTimer5A_Handler</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, bsp.o(i.WideTimer5A_Handler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = WideTimer5A_Handler
+</UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
 </UL>
-<P><STRONG><a name="[7a]"></a>checkbuttons</STRONG> (Thumb, 320 bytes, Stack size 24 bytes, bsptestmain.o(i.checkbuttons))
-<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = checkbuttons &rArr; BSP_Joystick_Input
+<P><STRONG><a name="[7a]"></a>checkbuttons</STRONG> (Thumb, 526 bytes, Stack size 8 bytes, bsptestmain.o(i.checkbuttons))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = checkbuttons &rArr; BSP_RGB_Set
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_RGB_Set
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_Joystick_Input
@@ -1529,9 +1542,9 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> bsptestmain.o(i.main)
 </UL>
-<P><STRONG><a name="[8c]"></a>main</STRONG> (Thumb, 1630 bytes, Stack size 16 bytes, bsptestmain.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
-<LI>Call Chain = main &rArr; BSP_LCD_OutUDec &rArr; BSP_LCD_DrawString &rArr; BSP_LCD_DrawChar &rArr; setAddrWindow &rArr; writedata
+<P><STRONG><a name="[8c]"></a>main</STRONG> (Thumb, 1882 bytes, Stack size 16 bytes, bsptestmain.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
+<LI>Call Chain = main &rArr; BSP_LCD_OutUDec &rArr; BSP_LCD_DrawString &rArr; BSP_LCD_DrawChar &rArr; setAddrWindow
 </UL>
 <BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WaitForInterrupt
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableInterrupts
@@ -1565,36 +1578,36 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[c6]"></a>numlength</STRONG> (Thumb, 92 bytes, Stack size 0 bytes, bsptestmain.o(i.numlength))
+<P><STRONG><a name="[c6]"></a>numlength</STRONG> (Thumb, 94 bytes, Stack size 0 bytes, bsptestmain.o(i.numlength))
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 <P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[be]"></a>I2C_Recv2</STRONG> (Thumb, 76 bytes, Stack size 12 bytes, bsp.o(i.I2C_Recv2))
+<P><STRONG><a name="[be]"></a>I2C_Recv2</STRONG> (Thumb, 116 bytes, Stack size 12 bytes, bsp.o(i.I2C_Recv2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = I2C_Recv2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tempsensorend
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorstart
-<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorend
+<BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tempsensorend
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorstart
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorend
 </UL>
 
-<P><STRONG><a name="[bd]"></a>I2C_Send1</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, bsp.o(i.I2C_Send1))
-<BR><BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tempsensorend
-<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorend
+<P><STRONG><a name="[bd]"></a>I2C_Send1</STRONG> (Thumb, 68 bytes, Stack size 0 bytes, bsp.o(i.I2C_Send1))
+<BR><BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tempsensorend
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorend
 </UL>
 
-<P><STRONG><a name="[bf]"></a>I2C_Send3</STRONG> (Thumb, 108 bytes, Stack size 12 bytes, bsp.o(i.I2C_Send3))
+<P><STRONG><a name="[bf]"></a>I2C_Send3</STRONG> (Thumb, 170 bytes, Stack size 12 bytes, bsp.o(i.I2C_Send3))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = I2C_Send3
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tempsensorstart
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorstart
-<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorend
+<BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tempsensorstart
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorstart
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lightsensorend
 </UL>
 
-<P><STRONG><a name="[a1]"></a>ST7735_InitR</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, bsp.o(i.ST7735_InitR))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = ST7735_InitR &rArr; commonInit &rArr; commandList &rArr; BSP_Delay1ms
+<P><STRONG><a name="[a1]"></a>ST7735_InitR</STRONG> (Thumb, 86 bytes, Stack size 8 bytes, bsp.o(i.ST7735_InitR))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = ST7735_InitR &rArr; BSP_LCD_FillScreen &rArr; BSP_LCD_FillRect &rArr; setAddrWindow
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LCD_SetCursor
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LCD_FillScreen
@@ -1606,13 +1619,13 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LCD_Init
 </UL>
 
-<P><STRONG><a name="[96]"></a>adcinit</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, bsp.o(i.adcinit))
+<P><STRONG><a name="[96]"></a>adcinit</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, bsp.o(i.adcinit))
 <BR><BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_Joystick_Init
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_Accelerometer_Init
 </UL>
 
-<P><STRONG><a name="[b4]"></a>commandList</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, bsp.o(i.commandList))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = commandList &rArr; BSP_Delay1ms
+<P><STRONG><a name="[b4]"></a>commandList</STRONG> (Thumb, 86 bytes, Stack size 24 bytes, bsp.o(i.commandList))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = commandList &rArr; BSP_Delay1ms
 </UL>
 <BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_Delay1ms
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writedata
@@ -1622,8 +1635,8 @@ Local Symbols
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_InitR
 </UL>
 
-<P><STRONG><a name="[b3]"></a>commonInit</STRONG> (Thumb, 380 bytes, Stack size 32 bytes, bsp.o(i.commonInit))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = commonInit &rArr; commandList &rArr; BSP_Delay1ms
+<P><STRONG><a name="[b3]"></a>commonInit</STRONG> (Thumb, 452 bytes, Stack size 8 bytes, bsp.o(i.commonInit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = commonInit &rArr; commandList &rArr; BSP_Delay1ms
 </UL>
 <BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_Delay1ms
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;commandList
@@ -1631,7 +1644,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_InitR
 </UL>
 
-<P><STRONG><a name="[a3]"></a>fillmessage</STRONG> (Thumb, 46 bytes, Stack size 12 bytes, bsp.o(i.fillmessage))
+<P><STRONG><a name="[a3]"></a>fillmessage</STRONG> (Thumb, 64 bytes, Stack size 12 bytes, bsp.o(i.fillmessage))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12 + In Cycle
 <LI>Call Chain = fillmessage &rArr;  fillmessage (Cycle)
 </UL>
@@ -1641,13 +1654,13 @@ Local Symbols
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fillmessage
 </UL>
 
-<P><STRONG><a name="[a8]"></a>i2cinit</STRONG> (Thumb, 100 bytes, Stack size 0 bytes, bsp.o(i.i2cinit))
+<P><STRONG><a name="[a8]"></a>i2cinit</STRONG> (Thumb, 126 bytes, Stack size 0 bytes, bsp.o(i.i2cinit))
 <BR><BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_TempSensor_Init
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LightSensor_Init
 </UL>
 
-<P><STRONG><a name="[a5]"></a>lightsensorend</STRONG> (Thumb, 82 bytes, Stack size 24 bytes, bsp.o(i.lightsensorend))
-<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = lightsensorend &rArr; I2C_Send3
+<P><STRONG><a name="[a6]"></a>lightsensorend</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, bsp.o(i.lightsensorend))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = lightsensorend &rArr; I2C_Send3
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Send3
 <LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Send1
@@ -1657,7 +1670,7 @@ Local Symbols
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LightSensor_End
 </UL>
 
-<P><STRONG><a name="[a6]"></a>lightsensorstart</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, bsp.o(i.lightsensorstart))
+<P><STRONG><a name="[a5]"></a>lightsensorstart</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, bsp.o(i.lightsensorstart))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = lightsensorstart &rArr; I2C_Send3
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Send3
@@ -1668,16 +1681,16 @@ Local Symbols
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LightSensor_End
 </UL>
 
-<P><STRONG><a name="[9b]"></a>pushColor</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, bsp.o(i.pushColor))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = pushColor &rArr; writedata
+<P><STRONG><a name="[9b]"></a>pushColor</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, bsp.o(i.pushColor))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = pushColor
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writedata
 </UL>
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LCD_DrawChar
 </UL>
 
-<P><STRONG><a name="[9a]"></a>setAddrWindow</STRONG> (Thumb, 100 bytes, Stack size 24 bytes, bsp.o(i.setAddrWindow))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = setAddrWindow &rArr; writedata
+<P><STRONG><a name="[9a]"></a>setAddrWindow</STRONG> (Thumb, 106 bytes, Stack size 24 bytes, bsp.o(i.setAddrWindow))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = setAddrWindow
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writedata
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writecommand
@@ -1686,8 +1699,8 @@ Local Symbols
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LCD_DrawChar
 </UL>
 
-<P><STRONG><a name="[ad]"></a>tempsensorend</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, bsp.o(i.tempsensorend))
-<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = tempsensorend &rArr; I2C_Recv2
+<P><STRONG><a name="[ae]"></a>tempsensorend</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, bsp.o(i.tempsensorend))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = tempsensorend &rArr; I2C_Recv2
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Send1
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Recv2
@@ -1696,8 +1709,8 @@ Local Symbols
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_TempSensor_End
 </UL>
 
-<P><STRONG><a name="[ae]"></a>tempsensorstart</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, bsp.o(i.tempsensorstart))
-<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = tempsensorstart &rArr; I2C_Send3
+<P><STRONG><a name="[ad]"></a>tempsensorstart</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, bsp.o(i.tempsensorstart))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = tempsensorstart &rArr; I2C_Send3
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Send3
 </UL>
@@ -1706,18 +1719,14 @@ Local Symbols
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_TempSensor_End
 </UL>
 
-<P><STRONG><a name="[b5]"></a>writecommand</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, bsp.o(i.writecommand))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = writecommand
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setAddrWindow
+<P><STRONG><a name="[b5]"></a>writecommand</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, bsp.o(i.writecommand))
+<BR><BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setAddrWindow
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;commandList
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_InitR
 </UL>
 
-<P><STRONG><a name="[9e]"></a>writedata</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, bsp.o(i.writedata))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = writedata
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LCD_FillRect
+<P><STRONG><a name="[9e]"></a>writedata</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, bsp.o(i.writedata))
+<BR><BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LCD_FillRect
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setAddrWindow
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pushColor
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;commandList
