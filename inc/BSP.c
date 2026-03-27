@@ -2249,6 +2249,7 @@ void BSP_PeriodicTask_StopC(void){
 // Assumes: BSP_Clock_InitFastest() has been called
 //          so clock = 80/80 = 1 MHz
 void BSP_Time_Init(void){long sr;
+	sr = StartCritical();
   // ***************** Wide Timer5B initialization *****************
   SYSCTL_RCGCWTIMER_R |= 0x20;     // activate clock for Wide Timer5
   while((SYSCTL_PRWTIMER_R&0x20) == 0){};// allow time for clock to stabilize
