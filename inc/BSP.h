@@ -20,6 +20,9 @@
    "Embedded Systems: Real Time Interfacing to Arm Cortex M Microcontrollers",
    ISBN: 978-1463590154, Jonathan Valvano, copyright (c) 2016
 
+  "Embedded Systems: Real-Time Operating Systems for ARM Cortex-M Microcontrollers",
+      ISBN: 978-1466468863, , Jonathan Valvano, copyright (c) 2016
+
  Copyright 2016 by Jonathan W. Valvano, valvano@mail.utexas.edu
     You may use, edit, run or distribute this file
     as long as the above copyright notice remains
@@ -153,9 +156,7 @@
 // J2.14 nothing                         {TM4C123 PB6, MSP432 P1.7}
 // J2.19 servo PWM                       {TM4C123 PB2, MSP432 P2.5}
 // J4.35 nothing                         {TM4C123 PC6, MSP432 P6.7}
-
 #include <stdint.h>
-
 //color constants                  red  grn  blu
 #define LCD_BLACK      0x0000   //   0,   0,   0
 #define LCD_BLUE       0x001F   //   0,   0, 255
